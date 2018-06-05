@@ -1,0 +1,244 @@
+section {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0;
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-weight: 18px;
+    margin-top: 20px;
+  }
+
+  p {
+    line-height: 24px;
+    color: $txt-color;
+    margin-top: 10px;
+  }
+
+  .tip {
+    color: $tip-color;
+  }
+
+  & p:nth-of-type(1){
+    margin-bottom: 20px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    li {
+      padding: 30px;
+      .iconfont {
+        color: $white;
+        display: inline-block;
+        font-size: 48px;
+        line-height: 100px;
+        background: $theme-color;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .personintro figure {
+    width: calc(33.33% - 40px);
+    margin: 10px;
+    background-color: $white;
+    padding: 10px;
+    float: left;
+    figcaption {
+      font-size: 18px;
+    }
+    a {
+      display: block;
+      // height: 200px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .timeline {
+    li {
+      margin-top: 60px;
+      margin-bottom: 100px;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 150px;
+        background-color: $border-color;
+        position: absolute;
+        top: 125px;
+        left: calc(50% - 1px);
+      }
+      &:last-child::before {
+        height: 0;
+      }
+      span {
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid $border-color;
+        background: url(../images/time-one.png) no-repeat left top;
+        background-size: cover;
+        cursor: pointer;
+        &:hover {
+          background-position: right top;
+        }
+      }
+
+      &:nth-child(2){
+        span {
+          background-image: url(../images/time-two.png);
+        }
+      }
+      &:nth-child(3){
+        span {
+          background-image: url(../images/time-three.png);
+        }
+      }
+      &:nth-child(4){
+        span {
+          background-image: url(../images/time-four.png);
+        }
+      }
+      &:nth-child(5){
+        span {
+          background-image: none;
+          text-align: center;
+          line-height: 124px;
+          background-color: $border-color;
+          color: $dd-color;
+          font-size: 30px;
+          cursor: auto;
+        }
+      }
+      dl {
+        dt {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        dd {
+          color: $txt-color;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        dd:nth-of-type(1) {
+          color: $dd-color;
+          font-weight: bold;
+        }
+      }
+    }
+    li:nth-child(odd) {
+      padding-right: calc(50% - 62px);
+      text-align: right;
+      span {
+        float: right;
+      }
+      dl {
+        margin: 0 144px 0 80px;
+      }
+    }
+    li:nth-child(even) {
+      padding-left: calc(50% - 62px);
+      text-align: left;
+      span {
+        float: left;
+      }
+      dl {
+        margin: 0 80px 0 144px;
+      }
+    }
+  }
+  .team {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    & > li {
+      padding: 30px;
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+      }
+    }
+  }
+  &.partner {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      img {
+        width: 200px;
+        opacity: 0.2;
+        transition: $transition;
+        vertical-align: top;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  form fieldset{
+    float: left;
+    width: 50%;
+    border: 0;
+    padding: 0;
+    margin-bottom: 90px;
+    input, textarea{
+      width: 90%;
+      margin-top: 15px;
+      padding: 16px ;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-size: 16px;
+      &:focus {
+        outline: 1px solid $theme-color;
+      }
+      &::placeholder {
+        color: $tip-color;
+      }
+    }
+    textarea {
+      height: 152px;
+    }
+  }
+  &:nth-child(even) {
+    width: 80%;
+    padding: 30px 10%;
+    background-color: $bg-color;
+  }
+  &.contact {
+    padding: 120px 10%;
+  }
+}
+.social-con li {
+  display: inline;
+  padding: 0 5px;
+  a {
+    display: table-cell;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    transition: $transition;
+    &:hover {
+      background-color: $theme-color;
+    }
+  }
+}

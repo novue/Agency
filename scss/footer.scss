@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+  p {
+    color: $dd-color;
+    line-height: 40px;
+  }
+  .friendlink li {
+    display: inline;
+    a {
+      font-size: 14px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: $dd-color;
+      line-height: 40px;
+      transition: $transition;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}

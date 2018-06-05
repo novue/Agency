@@ -1,0 +1,52 @@
+$theme-color: #fed136;
+$white: #fff;
+$black:#000;
+$transition: all 0.3s;
+$dd-color: #333;
+$txt-color: #555;
+$tip-color: #777;
+$bg-color: #f9f9f9;
+$border-color: #eee;
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.layout {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: $theme-color;
+  color: $white;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: $transition;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+p {
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p::selection {
+  background-color: $theme-color;
+}
+
